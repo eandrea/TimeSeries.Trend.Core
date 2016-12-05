@@ -5,7 +5,7 @@ namespace TimeSeries.Trend.Core
     //  Az idősor trendjét meghatározó absztrakt osztály
     // A strategy tervezési mintát valósítja meg
     // Ez lesz a szülőosztály és a leszrátmazottaknak
-    // (stratégiáknak) meg kell valósítaniuk a Trend függvényt,
+    // (stratégiáknak) meg kell valósítaniuk a Trend metódust,
     // amely egy TimeSeries-t vár paraméterként.
     public abstract class TrendStrategy
     {
