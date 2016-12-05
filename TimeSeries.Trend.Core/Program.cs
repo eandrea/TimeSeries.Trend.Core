@@ -1,5 +1,4 @@
-﻿using Gauss.MyType;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace TimeSeries.Trend.Core

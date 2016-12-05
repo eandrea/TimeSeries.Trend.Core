@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Gauss.MyType
+namespace TimeSeries.Trend.Core
 {
     // Lineáris egyenletrendszereink típusa
     public class SystemOfLinearEquations
