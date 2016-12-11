@@ -22,38 +22,26 @@ namespace TimeSeries.Trend.Core
 
         #endregion
 
-        // Konstruktor létrehozása. Feladata, hogy inicializál elemeket
+        #region Konstruktor létrehozása
         public SystemOfLinearEquations()
         {
             A = new List<List<double>>();
             b = new List<double>();
         }
+        #endregion
 
         #region A mátrix feltöltése
-        public void SetA(int rowSize)
+        public void SetA(List<List<double>> timeSeriesA)
         {
-            n = rowSize;
-            // 41,1 = 8 * x1 + 36 * x2
-            // 201,8 = 36 * x1 + 204 * x2
-
-            List<double> first = new List<double>();
-            first.Add(8);
-            first.Add(36);
-
-            List<double> second = new List<double>();
-            second.Add(36);
-            second.Add(204);
-
-            A.Add(first);
-            A.Add(second);
+            n = timeSeriesA.Count;
+            A = timeSeriesA;
         }
         #endregion
 
         #region b vektor feltöltése
-        public void Setb()
+        public void Setb(List<double> actb)
         {
-            b.Add(41.1);
-            b.Add(201.8);
+            b = actb;
         }
         #endregion
 
@@ -125,7 +113,7 @@ namespace TimeSeries.Trend.Core
                 maxIndexRow.Add(A[maxIndex][j]);
             }
 
-            for (int j = 0; j < n; j++)
+            for (int j = 0; j < n; ++j)
             {
                 kIndexRow.Add(A[k][j]);
             }
@@ -133,7 +121,7 @@ namespace TimeSeries.Trend.Core
             // Sorcsere az A mátrixban
             for (int i = 0; i < n; ++i)
             {
-                for (int j = 0; j < n; j++)
+                for (int j = 0; j < n; ++j)
                 {
                     if (i == maxIndex)
                     {

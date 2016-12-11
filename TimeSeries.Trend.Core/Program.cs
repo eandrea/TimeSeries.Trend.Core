@@ -7,18 +7,11 @@ namespace TimeSeries.Trend.Core
     {
         static void Main(string[] args)
         {
-            SystemOfLinearEquations a = new SystemOfLinearEquations();
-            a.SetA(2);
-            a.Setb();
-            List<double> x = a.GaussMethod();
-
-            int i = 1;
-            foreach (double item in x)
-            {
-                Console.WriteLine("x{0}= {1}", i, item);
-                ++i;
-            }
-
+            TimeSeries munkanelkulisegirata20082009 = new TimeSeries();
+            munkanelkulisegirata20082009.Sety();
+            munkanelkulisegirata20082009.SetTrendStrategy(new LinearTrend());
+            munkanelkulisegirata20082009.Trend();
+            
             Console.ReadKey();
         }
     }

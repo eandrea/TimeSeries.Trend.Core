@@ -19,8 +19,14 @@ namespace TimeSeries.Trend.Core
         // A együttható mátrix
         protected List<List<double>> A;
 
-        // A normálegyenleteink gyökei
-        protected double betha0, betha1;
+        // A normálegyenleteink gyökeihez
+        protected List<double> x;
+
+        // Egy idősor
+        protected TimeSeries timeSeries;
+
+        // A lineráris egyenletrendszerünk tárolásához és megoldásához
+        protected SystemOfLinearEquations normalEquations;
 
         public abstract void Trend(TimeSeries timeSeries);
     }
