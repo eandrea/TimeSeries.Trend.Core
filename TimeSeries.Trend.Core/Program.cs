@@ -7,11 +7,30 @@ namespace TimeSeries.Trend.Core
     {
         static void Main(string[] args)
         {
-            TimeSeries munkanelkulisegirata20082009 = new TimeSeries();
-            munkanelkulisegirata20082009.Sety();
-            munkanelkulisegirata20082009.SetTrendStrategy(new LinearTrend());
-            munkanelkulisegirata20082009.Trend();
-            
+            List<TimeSeries> timeSeriesList = new List<TimeSeries>();
+
+            TimeSeries munkanelkulisegirata20082009Linear = new TimeSeries();
+            munkanelkulisegirata20082009Linear.Sety();
+            munkanelkulisegirata20082009Linear.SetTrendStrategy(new LinearTrend());
+
+
+            TimeSeries munkanelkulisegirata20082009Exponential = new TimeSeries();
+            munkanelkulisegirata20082009Exponential.Sety2();
+            munkanelkulisegirata20082009Exponential.SetTrendStrategy(new ExponentialTrend());
+
+            timeSeriesList.Add(munkanelkulisegirata20082009Linear);
+            timeSeriesList.Add(munkanelkulisegirata20082009Exponential);
+
+            foreach (TimeSeries item in timeSeriesList)
+            {
+                item.Trend();
+                Console.WriteLine();
+            }
+
+            //double c = Math.Log(5, Math.E);
+
+            ////Console.WriteLine("e^{0} = {1}",c, Math.Pow(Math.E,c));
+
             Console.ReadKey();
         }
     }
