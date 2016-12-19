@@ -111,6 +111,70 @@ namespace TimeSeries.Trend.Core
         }
         #endregion
 
+        #region Harmadik idősor bekérése
+        public void Sety3()
+        {
+            // y = < 4.5, 4.2, 4.3, 3.9, 5.1, 5.7 ,6.5, 6.9 >
+
+ 
+            y.Add(135.8);
+            y.Add(151.5);
+            y.Add(157);
+            y.Add(165.8);
+
+
+            y.Add(182.9);
+            y.Add(188.4);
+            y.Add(185.3);
+            y.Add(225.4);
+
+
+            y.Add(341.1);
+            y.Add(440.4);
+            y.Add(447.2);
+
+            string a = "";
+
+            // Az idősor hossza
+            n = y.Count;
+        }
+        #endregion
+
+        #region Negyedik idősor bekérése
+        public void Sety4()
+        {
+            // y = < 4.5, 4.2, 4.3, 3.9, 5.1, 5.7 ,6.5, 6.9 >
+
+
+            y.Add(10);
+            y.Add(12);
+            y.Add(14);
+            y.Add(15);
+
+
+            y.Add(17);
+            y.Add(19);
+            y.Add(20);
+            y.Add(21);
+
+
+            y.Add(23);
+            y.Add(25);
+            y.Add(28);
+            y.Add(30);
+
+            y.Add(35);
+            y.Add(39);
+            y.Add(43);
+            y.Add(46);
+
+            string a = "";
+
+            // Az idősor hossza
+            n = y.Count;
+        }
+        #endregion
+
         #region Stratégia meghatározása (milyen trend alapján számoljon)
         public void SetTrendStrategy(TrendStrategy trendStrategy)
         {

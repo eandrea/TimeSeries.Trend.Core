@@ -15,7 +15,7 @@ namespace TimeSeries.Trend.Core
 
 
             TimeSeries munkanelkulisegirata20082009Exponential = new TimeSeries();
-            munkanelkulisegirata20082009Exponential.Sety2();
+            munkanelkulisegirata20082009Exponential.Sety4();
             munkanelkulisegirata20082009Exponential.SetTrendStrategy(new ExponentialTrend());
 
             timeSeriesList.Add(munkanelkulisegirata20082009Linear);
